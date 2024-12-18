@@ -1,16 +1,16 @@
 import tkinter as tk
-import webbrowser
 
-def create_menu(root, app):
-    menu = tk.Menu(root)
-    root.config(menu=menu)
+def show_menu():
+    root = tk.Tk()
+    root.title("Main Menu")
+    
+    label = tk.Label(root, text="Welcome to the App")
+    label.pack()
+    
+    start_button = tk.Button(root, text="Start", command=start_process)
+    start_button.pack()
+    
+    root.mainloop()
 
-    profile_menu = tk.Menu(menu, tearoff=0)
-    menu.add_cascade(label="Profile", menu=profile_menu)
-    profile_menu.add_command(label="Create Profile", command=app.create_profile)
-    profile_menu.add_command(label="Search by ID", command=app.search_by_id)
-
-    help_menu = tk.Menu(menu, tearoff=0)
-    menu.add_cascade(label="Help", menu=help_menu)
-    help_menu.add_command(label="Go to Site", command=lambda: webbrowser.open("http://wisp.wispnet.org/dbx"))
-    help_menu.add_command(label="Contact Support", command=lambda: webbrowser.open("mailto:help@wispnet.org"))
+def start_process():
+    print("Starting process...")
