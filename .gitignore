@@ -161,3 +161,6 @@ cython_debug/
 
 # WISPNET macOS Ignore
 .DS_Store
+
+# wndbx internal database ignore
+*.db
