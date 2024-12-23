@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=WNDBX
+Comment=An app by WISPNET
+Exec=/usr/bin/wndbx
+Icon=/usr/share/pixmaps/wndbx.svg
+Terminal=false
+Type=Application
+Categories=Utility;
